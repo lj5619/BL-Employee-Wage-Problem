@@ -1,14 +1,19 @@
-
-print('This is Employee wage problem')
-
-# Checking employee attendance
+# function to print the salary
 import random
 
 def check_attendance():
-    attendance = random.randint(0,1)
-    if attendance == 0:
-        print('Employee is absent')
-    else:
-        print('Employee is present')
+    return random.randint(0,1)
 
-check_attendance()
+def daily_wage():
+    attendance = check_attendance()
+    salary = hours = 0
+    if attendance == 1:
+        hours = 8
+        print('Employee is present')
+    else:
+        print('Employee is absent')
+    salary = hours * 20
+    
+    print(f'The daily wage of employee is {salary}')
+
+daily_wage()
