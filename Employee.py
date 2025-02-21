@@ -1,9 +1,19 @@
 import random
 
 def check_attendance():
+    """
+        Description: Function to check attendance
+        Parameters: None
+        Return: random integer between 0 and 2
+    """
     return random.randint(0,2)
 
 def daily_wage():
+    """
+        Description: Function to calculate daily wage
+        Parameters: None
+        Return: salary, hours
+    """
     attendance = check_attendance()
     hours = 0
     match attendance:
@@ -15,6 +25,11 @@ def daily_wage():
     return salary, hours
 
 def monthly_wage():
+    """
+        Description: Function to calculate monthly wage
+        Parameters: None
+        Return: None
+    """
     total_hours = 0
     total_days = 0
     total_salary = 0
