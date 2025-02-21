@@ -1,4 +1,3 @@
-
 import random
 
 def check_attendance():
@@ -16,11 +15,14 @@ def daily_wage():
             print('Employee is part time and is present today')
         case _:
             print('Employee is absent today')
-        
-    salary = hours * 20
-    monthly_salary = salary * 20
+    salary = 20 * hours
     print(f'The daily wage of employee is {salary}')
-    print(f'The monthly wage of the employee is {monthly_salary}')
+    return hours * 20
 
-daily_wage()
+def monthly_wage():
+    daily_salary = daily_wage()
+    monthly_salary = daily_salary * 20
+    print(f'The monthly salary of the employee is {monthly_salary}')
+   
 
+monthly_wage()
