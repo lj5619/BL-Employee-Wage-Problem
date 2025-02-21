@@ -17,12 +17,21 @@ def daily_wage():
             print('Employee is absent today')
     salary = 20 * hours
     print(f'The daily wage of employee is {salary}')
-    return hours * 20
+    return salary, hours
 
 def monthly_wage():
-    daily_salary = daily_wage()
-    monthly_salary = daily_salary * 20
-    print(f'The monthly salary of the employee is {monthly_salary}')
+    total_hours = 0
+    total_days = 0
+    total_salary = 0
+    
+    while total_hours < 100 and total_days < 20:
+        daily_salary, hours = daily_wage()
+        total_salary += daily_salary
+        total_hours += hours
+        total_days += 1
+    
+    print(f'Total working days: {total_days}')
+    print(f'Total working hours: {total_hours}')
+    print(f'The total monthly salary of the employee is {total_salary}')
    
-
 monthly_wage()
