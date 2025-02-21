@@ -5,18 +5,13 @@ def check_attendance():
 
 def daily_wage():
     attendance = check_attendance()
-    hours = salary = 0
+    hours = 0
     match attendance:
         case 1:
             hours = 8
-            print('Employee is full time and is present today')
         case 2:
             hours = 4
-            print('Employee is part time and is present today')
-        case _:
-            print('Employee is absent today')
-    salary = 20 * hours
-    print(f'The daily wage of employee is {salary}')
+    salary = hours * 20
     return salary, hours
 
 def monthly_wage():
