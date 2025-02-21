@@ -18,8 +18,9 @@ def daily_wage():
             print('Employee is absent today')
         
     salary = hours * 20
-
+    monthly_salary = salary * 20
     print(f'The daily wage of employee is {salary}')
+    print(f'The monthly wage of the employee is {monthly_salary}')
 
 daily_wage()
 
